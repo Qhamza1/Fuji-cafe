@@ -3,9 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#FEF2E4">
+<meta name="theme-color" content="#FEF2E4" id="tc">
+<script>
+(function () {
+  var t = null;
+  try { t = localStorage.getItem('fuji-theme'); } catch (e) {}
+  if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('tc').setAttribute('content', t === 'dark' ? '#1F1712' : '#FEF2E4');
+})();
+</script>
 <title>Fuji Café | فوجي كافيه - كفر الشيخ</title>
-<meta name="description" content="Fuji Café - Coffee and Desserts, Kafr El-Sheikh. منيو كامل بالأسعار.">
+<meta name="description" content="شيمني، وافل، تايياكي، قهوة ومشروبات باردة. شوف منيو فوجي كافيه كامل بالأسعار واطلب واتساب - كفر الشيخ.">
+<link rel="canonical" href="https://fujicafe.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fuji Café | فوجي كافيه">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:title" content="فوجي كافيه | منيو وأسعار - كفر الشيخ">
+<meta property="og:description" content="شيمني، وافل، تايياكي، قهوة ومشروبات باردة. شوف المنيو كامل واطلب واتساب.">
+<meta property="og:url" content="https://fujicafe.vercel.app/">
+<meta property="og:image" content="https://fujicafe.vercel.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fuji Café - Coffee and Desserts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fujicafe.vercel.app/og.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.webmanifest">
@@ -18,6 +40,10 @@
   <a class="mark" href="#top" aria-label="FUJI"><img id="mk" alt="FUJI"></a>
   <div class="actions">
     <span id="state" class="state"></span>
+    <button id="theme" class="ibtn" type="button" aria-label="Dark / Light">
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 14.5A9 9 0 0 1 9.5 3a9 9 0 1 0 11.5 11.5z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg>
+    </button>
     <button id="lang" type="button" aria-label="Language">EN</button>
   </div>
 </header>

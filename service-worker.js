@@ -1,5 +1,5 @@
 // غيّر رقم النسخة ده كل مرة تعدل ملفات الموقع، عشان المتصفح يحمّل الجديد
-const CACHE = 'fuji-cache-v1';
+const CACHE = 'fuji-cache-v5';
 
 const APP_SHELL = [
   './',

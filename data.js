@@ -63,28 +63,33 @@ const MENU = [
     "prices": [
      120,
      130
-    ]
+    ],
+    "ar": "شيمني",
+    "opt_ar": "دارك شوكليت / نوتيلا / لوتس / أوريو / ريد فيلفت"
    },
    {
     "name": "Chimney Cinnamon",
     "prices": [
      115,
      120
-    ]
+    ],
+    "ar": "شيمني قرفة"
    },
    {
     "name": "Chimney Snickers",
     "prices": [
      135,
      140
-    ]
+    ],
+    "ar": "شيمني سنيكرز"
    },
    {
     "name": "Chimney Pistachio",
     "prices": [
      160,
      170
-    ]
+    ],
+    "ar": "شيمني فستق"
    }
   ]
  },
@@ -93,23 +98,28 @@ const MENU = [
   "items": [
    {
     "name": "Chimney Turkey - Salami",
-    "price": 140
+    "price": 140,
+    "ar": "شيمني تركي - سلامي"
    },
    {
     "name": "Chimney Salami & Turkey",
-    "price": 155
+    "price": 155,
+    "ar": "شيمني سلامي وتركي"
    },
    {
     "name": "Chimney Mix Cheese",
-    "price": 155
+    "price": 155,
+    "ar": "شيمني ميكس جبن"
    },
    {
     "name": "Chimney Strips",
-    "price": 165
+    "price": 165,
+    "ar": "شيمني ستريبس"
    },
    {
     "name": "Chimney Mini Burger",
-    "price": 170
+    "price": 170,
+    "ar": "شيمني ميني برجر"
    }
   ]
  },
@@ -119,24 +129,31 @@ const MENU = [
    {
     "name": "Waffle",
     "options": "Caramel - White - Dark",
-    "price": 115
+    "price": 115,
+    "ar": "وافل",
+    "opt_ar": "كراميل - وايت - دارك"
    },
    {
     "name": "Waffle",
     "options": "Nutella - Lotus - Oreo - Kinder",
-    "price": 120
+    "price": 120,
+    "ar": "وافل",
+    "opt_ar": "نوتيلا - لوتس - أوريو - كيندر"
    },
    {
     "name": "Waffle Pistachio",
-    "price": 140
+    "price": 140,
+    "ar": "وافل فستق"
    },
    {
     "name": "Waffle Mix Fruit",
-    "price": 135
+    "price": 135,
+    "ar": "وافل ميكس فواكه"
    },
    {
     "name": "Waffle Four-Season",
-    "price": 150
+    "price": 150,
+    "ar": "وافل فور سيزون"
    }
   ]
  },
@@ -153,7 +170,9 @@ const MENU = [
     "prices": [
      110,
      190
-    ]
+    ],
+    "ar": "ميني بان كيك",
+    "opt_ar": "كراميل - وايت - دارك"
    },
    {
     "name": "Mini Pancakes",
@@ -161,28 +180,33 @@ const MENU = [
     "prices": [
      120,
      210
-    ]
+    ],
+    "ar": "ميني بان كيك",
+    "opt_ar": "نوتيلا - لوتس - أوريو - كيندر"
    },
    {
     "name": "Mini Pancakes Pistachio",
     "prices": [
      145,
      255
-    ]
+    ],
+    "ar": "ميني بان كيك فستق"
    },
    {
     "name": "Mini Pancakes Mix Sauce",
     "prices": [
      125,
      230
-    ]
+    ],
+    "ar": "ميني بان كيك ميكس صوص"
    },
    {
     "name": "Make your Mini Pancakes",
     "prices": [
      125,
      230
-    ]
+    ],
+    "ar": "ميني بان كيك على ذوقك"
    }
   ]
  },
@@ -192,15 +216,19 @@ const MENU = [
    {
     "name": "Taiyaki",
     "options": "Dark - Nutella - Lotus - Oreo - Red velvet",
-    "price": 125
+    "price": 125,
+    "ar": "تايياكي",
+    "opt_ar": "دارك - نوتيلا - لوتس - أوريو - ريد فيلفت"
    },
    {
     "name": "Taiyaki Pistachio",
-    "price": 150
+    "price": 150,
+    "ar": "تايياكي فستق"
    },
    {
     "name": "Baby Taiyaki",
-    "price": 165
+    "price": 165,
+    "ar": "بيبي تايياكي"
    }
   ]
  },
@@ -209,35 +237,43 @@ const MENU = [
   "items": [
    {
     "name": "Nutella",
-    "price": 110
+    "price": 110,
+    "ar": "نوتيلا"
    },
    {
     "name": "Nuts",
-    "price": 110
+    "price": 110,
+    "ar": "مكسرات"
    },
    {
     "name": "Kinder",
-    "price": 125
+    "price": 125,
+    "ar": "كيندر"
    },
    {
     "name": "Strawberry",
-    "price": 105
+    "price": 105,
+    "ar": "فراولة"
    },
    {
     "name": "Lotus",
-    "price": 115
+    "price": 115,
+    "ar": "لوتس"
    },
    {
     "name": "Raffaello Sandwich",
-    "price": 120
+    "price": 120,
+    "ar": "رافايلو ساندوتش"
    },
    {
     "name": "Oreo",
-    "price": 105
+    "price": 105,
+    "ar": "أوريو"
    },
    {
     "name": "Pistachio Sandwich",
-    "price": 130
+    "price": 130,
+    "ar": "فستق ساندوتش"
    }
   ]
  },
@@ -248,78 +284,99 @@ const MENU = [
    {
     "name": "Dragon Balls",
     "options": "Dark - White - Nutella - Lotus",
-    "price": 130
+    "price": 130,
+    "ar": "دراجون بولز",
+    "opt_ar": "دارك - وايت - نوتيلا - لوتس"
    },
    {
     "name": "Dragon Balls Kinder",
-    "price": 140
+    "price": 140,
+    "ar": "دراجون بولز كيندر"
    },
    {
     "name": "Dragon Balls Pistachio",
-    "price": 170
+    "price": 170,
+    "ar": "دراجون بولز فستق"
    }
-  ]
+  ],
+  "note_ar": "10 قطع"
  },
  {
   "category": "Desserts",
   "items": [
    {
     "name": "Chocolate Cake",
-    "price": 120
+    "price": 120,
+    "ar": "تشوكليت كيك"
    },
    {
     "name": "Molten Cake",
-    "price": 125
+    "price": 125,
+    "ar": "مولتن كيك"
    },
    {
     "name": "Brownies",
-    "price": 120
+    "price": 120,
+    "ar": "براونيز"
    },
    {
     "name": "Ice Mega",
-    "price": 130
+    "price": 130,
+    "ar": "آيس ميجا"
    },
    {
     "name": "Red Velvet",
-    "price": 130
+    "price": 130,
+    "ar": "ريد فيلفت"
    },
    {
     "name": "Tiramisu Cake",
-    "price": 125
+    "price": 125,
+    "ar": "تيراميسو كيك"
    },
    {
     "name": "Cinnamon",
-    "price": 130
+    "price": 130,
+    "ar": "سينامون"
    },
    {
     "name": "Magic Cake",
-    "price": 125
+    "price": 125,
+    "ar": "ماجيك كيك"
    },
    {
     "name": "Matilda Cake",
-    "price": 130
+    "price": 130,
+    "ar": "ماتيلدا كيك"
    },
    {
     "name": "Cheesecake",
     "options": "Dark - White Chocolate - Nutella - Lotus",
-    "price": 130
+    "price": 130,
+    "ar": "تشيز كيك",
+    "opt_ar": "دارك - وايت شوكليت - نوتيلا - لوتس"
    },
    {
     "name": "Cheesecake Pistachio",
-    "price": 140
+    "price": 140,
+    "ar": "تشيز كيك فستق"
    },
    {
     "name": "San Sebastian",
     "options": "Strawberry - Blueberry - Caramel - Dark - White Chocolate - Nutella - Lotus",
-    "price": 130
+    "price": 130,
+    "ar": "سان سيباستيان",
+    "opt_ar": "فراولة - بلوبيري - كراميل - دارك - وايت شوكليت - نوتيلا - لوتس"
    },
    {
     "name": "San Sebastian Kinder",
-    "price": 135
+    "price": 135,
+    "ar": "سان سيباستيان كيندر"
    },
    {
     "name": "San Sebastian Pistachio",
-    "price": 145
+    "price": 145,
+    "ar": "سان سيباستيان فستق"
    }
   ]
  },
@@ -329,12 +386,16 @@ const MENU = [
    {
     "name": "Mochi",
     "options": "Mango - Strawberry - Lemon - Chocolate - Passion Fruit - Gum - Vanilla - Cotton Candy",
-    "price": 80
+    "price": 80,
+    "ar": "موتشي",
+    "opt_ar": "مانجو - فراولة - ليمون - شوكولاتة - باشن فروت - علكة - فانيليا - غزل البنات"
    },
    {
     "name": "Mochi",
     "options": "Pistachio - Polo",
-    "price": 80
+    "price": 80,
+    "ar": "موتشي",
+    "opt_ar": "فستق - بولو"
    }
   ]
  },
@@ -343,17 +404,22 @@ const MENU = [
   "items": [
    {
     "name": "Sundae Classic",
-    "price": 65
+    "price": 65,
+    "ar": "صنداي كلاسيك"
    },
    {
     "name": "Sundae",
     "options": "Strawberry - Blueberry - Nutella - Lotus",
-    "price": 75
+    "price": 75,
+    "ar": "صنداي",
+    "opt_ar": "فراولة - بلوبيري - نوتيلا - لوتس"
    },
    {
     "name": "Sundae",
     "options": "Pistachio - Espresso",
-    "price": 95
+    "price": 95,
+    "ar": "صنداي",
+    "opt_ar": "فستق - إسبريسو"
    }
   ]
  },
@@ -362,59 +428,73 @@ const MENU = [
   "items": [
    {
     "name": "Nutella",
-    "price": 120
+    "price": 120,
+    "ar": "نوتيلا"
    },
    {
     "name": "Oreo",
-    "price": 120
+    "price": 120,
+    "ar": "أوريو"
    },
    {
     "name": "Lotus",
-    "price": 120
+    "price": 120,
+    "ar": "لوتس"
    },
    {
     "name": "Kinder",
-    "price": 120
+    "price": 120,
+    "ar": "كيندر"
    },
    {
     "name": "Snickers",
-    "price": 120
+    "price": 120,
+    "ar": "سنيكرز"
    },
    {
     "name": "Strawberry",
-    "price": 115
+    "price": 115,
+    "ar": "فراولة"
    },
    {
     "name": "Blueberry",
-    "price": 115
+    "price": 115,
+    "ar": "بلوبيري"
    },
    {
     "name": "Mixed Berry",
-    "price": 120
+    "price": 120,
+    "ar": "ميكس بيري"
    },
    {
     "name": "Mango",
-    "price": 115
+    "price": 115,
+    "ar": "مانجو"
    },
    {
     "name": "Mango Peach",
-    "price": 120
+    "price": 120,
+    "ar": "مانجو خوخ"
    },
    {
     "name": "Mango Passion",
-    "price": 120
+    "price": 120,
+    "ar": "مانجو باشن"
    },
    {
     "name": "Kit Kat",
-    "price": 130
+    "price": 130,
+    "ar": "كيت كات"
    },
    {
     "name": "Galaxy",
-    "price": 130
+    "price": 130,
+    "ar": "جالاكسي"
    },
    {
     "name": "Pistachio",
-    "price": 140
+    "price": 140,
+    "ar": "فستق"
    }
   ]
  },
@@ -424,11 +504,14 @@ const MENU = [
    {
     "name": "Frappe",
     "options": "Vanilla - Chocolate - Caramel - Tiramisu - Cinnamon - Coffee - Blueberry - Passion - Hazelnut - Mango - Lotus - Kinder",
-    "price": 115
+    "price": 115,
+    "ar": "فرابيه",
+    "opt_ar": "فانيليا - شوكولاتة - كراميل - تيراميسو - قرفة - قهوة - بلوبيري - باشن - بندق - مانجو - لوتس - كيندر"
    },
    {
     "name": "Frappe Pistachio",
-    "price": 140
+    "price": 140,
+    "ar": "فرابيه فستق"
    }
   ]
  },
@@ -438,11 +521,14 @@ const MENU = [
    {
     "name": "Frappuccino",
     "options": "Vanilla - Chocolate - Caramel - Tiramisu - Cinnamon - Coffee - Blueberry - Passion - Hazelnut - Mango - Lotus - Kinder",
-    "price": 130
+    "price": 130,
+    "ar": "فرابتشينو",
+    "opt_ar": "فانيليا - شوكولاتة - كراميل - تيراميسو - قرفة - قهوة - بلوبيري - باشن - بندق - مانجو - لوتس - كيندر"
    },
    {
     "name": "Frappuccino Pistachio",
-    "price": 150
+    "price": 150,
+    "ar": "فرابتشينو فستق"
    }
   ]
  },
@@ -451,53 +537,66 @@ const MENU = [
   "items": [
    {
     "name": "Mango",
-    "price": 90
+    "price": 90,
+    "ar": "مانجو"
    },
    {
     "name": "Strawberry",
-    "price": 90
+    "price": 90,
+    "ar": "فراولة"
    },
    {
     "name": "Lemon with mint",
-    "price": 90
+    "price": 90,
+    "ar": "ليمون بالنعناع"
    },
    {
     "name": "Watermelon",
-    "price": 90
+    "price": 90,
+    "ar": "بطيخ"
    },
    {
     "name": "Peach",
-    "price": 90
+    "price": 90,
+    "ar": "خوخ"
    },
    {
     "name": "Passion Fruit",
-    "price": 90
+    "price": 90,
+    "ar": "باشن فروت"
    },
    {
     "name": "Red bull cola",
     "price": 110,
-    "badge": "New Item"
+    "badge": "New Item",
+    "ar": "ريد بول كولا"
    },
    {
     "name": "Blueberry",
-    "price": 90
+    "price": 90,
+    "ar": "بلوبيري"
    },
    {
     "name": "Mixed Berry",
-    "price": 100
+    "price": 100,
+    "ar": "ميكس بيري"
    },
    {
     "name": "Mango Peach",
-    "price": 100
+    "price": 100,
+    "ar": "مانجو خوخ"
    },
    {
     "name": "Mango Passion",
-    "price": 100
+    "price": 100,
+    "ar": "مانجو باشن"
    },
    {
     "name": "Grenadine",
     "options": "Mango - Passion Fruit - Blueberry - Strawberry - Mixed Berry",
-    "price": 115
+    "price": 115,
+    "ar": "جرينادين",
+    "opt_ar": "مانجو - باشن فروت - بلوبيري - فراولة - ميكس بيري"
    }
   ]
  },
@@ -506,43 +605,53 @@ const MENU = [
   "items": [
    {
     "name": "Blueberry Mojito",
-    "price": 115
+    "price": 115,
+    "ar": "موهيتو بلوبيري"
    },
    {
     "name": "Strawberry Mojito",
-    "price": 115
+    "price": 115,
+    "ar": "موهيتو فراولة"
    },
    {
     "name": "Passion Fruit Mojito",
-    "price": 115
+    "price": 115,
+    "ar": "موهيتو باشن فروت"
    },
    {
     "name": "Lemon With Mint Mojito",
-    "price": 120
+    "price": 120,
+    "ar": "موهيتو ليمون بالنعناع"
    },
    {
     "name": "Mixed Berry Mojito",
-    "price": 120
+    "price": 120,
+    "ar": "موهيتو ميكس بيري"
    },
    {
     "name": "Sunshine",
-    "price": 120
+    "price": 120,
+    "ar": "صن شاين"
    },
    {
     "name": "Sunrise",
-    "price": 120
+    "price": 120,
+    "ar": "صن رايز"
    },
    {
     "name": "Sun Blue",
-    "price": 120
+    "price": 120,
+    "ar": "صن بلو"
    },
    {
     "name": "Cherry Cola",
-    "price": 120
+    "price": 120,
+    "ar": "شيري كولا"
    },
    {
     "name": "Fun on Beach",
-    "price": 125
+    "price": 125,
+    "ar": "فان أون بيتش"
    }
   ]
  },
@@ -551,54 +660,69 @@ const MENU = [
   "items": [
    {
     "name": "Mango",
-    "price": 80
+    "price": 80,
+    "ar": "مانجو"
    },
    {
     "name": "Strawberry",
-    "price": 80
+    "price": 80,
+    "ar": "فراولة"
    },
    {
     "name": "Guava",
-    "price": 80
+    "price": 80,
+    "ar": "جوافة"
    },
    {
     "name": "Lemon",
-    "price": 70
+    "price": 70,
+    "ar": "ليمون"
    },
    {
     "name": "Lemon With Mint",
-    "price": 75
+    "price": 75,
+    "ar": "ليمون بالنعناع"
    },
    {
     "name": "Watermelon",
-    "price": 75
+    "price": 75,
+    "ar": "بطيخ"
    },
    {
     "name": "Guava Milk",
-    "price": 85
+    "price": 85,
+    "ar": "جوافة بالحليب"
    },
    {
     "name": "Strawberry Milk",
-    "price": 85
+    "price": 85,
+    "ar": "فراولة بالحليب"
    },
    {
     "name": "Banana Caramel",
-    "price": 85
+    "price": 85,
+    "ar": "موز كراميل"
    },
    {
     "name": "Florida",
     "options": "Mango + Strawberry",
-    "price": 90
+    "price": 90,
+    "ar": "فلوريدا",
+    "opt_ar": "مانجو + فراولة"
    },
    {
     "name": "Costarica",
     "options": "Strawberry + Banana",
-    "price": 90
+    "price": 90,
+    "ar": "كوستاريكا",
+    "opt_ar": "فراولة + موز"
    },
    {
     "name": "Vitamin C",
     "options": "Guava + Lemon & Mint",
-    "price": 85
+    "price": 85,
+    "ar": "فيتامين سي",
+    "opt_ar": "جوافة + ليمون ونعناع"
    }
   ]
  },
@@ -607,43 +731,53 @@ const MENU = [
   "items": [
    {
     "name": "Ice Latte",
-    "price": 100
+    "price": 100,
+    "ar": "آيس لاتيه"
    },
    {
     "name": "Ice Espresso",
-    "price": 90
+    "price": 90,
+    "ar": "آيس إسبريسو"
    },
    {
     "name": "Ice Mocha",
-    "price": 100
+    "price": 100,
+    "ar": "آيس موكا"
    },
    {
     "name": "Ice White Mocha",
-    "price": 110
+    "price": 110,
+    "ar": "آيس وايت موكا"
    },
    {
     "name": "Ice Caramel Mekato",
-    "price": 115
+    "price": 115,
+    "ar": "آيس كراميل ميكاتو"
    },
    {
     "name": "Ice Spanish Latte",
-    "price": 130
+    "price": 130,
+    "ar": "آيس سبانش لاتيه"
    },
    {
     "name": "Ice Spanish Latte Pistachio",
-    "price": 150
+    "price": 150,
+    "ar": "آيس سبانش لاتيه فستق"
    },
    {
     "name": "Ice Latte Cinnamon",
-    "price": 110
+    "price": 110,
+    "ar": "آيس لاتيه قرفة"
    },
    {
     "name": "Ice Latte Tiramisu",
-    "price": 120
+    "price": 120,
+    "ar": "آيس لاتيه تيراميسو"
    },
    {
     "name": "Ice Tea",
-    "price": 90
+    "price": 90,
+    "ar": "آيس تي"
    }
   ]
  },
@@ -659,42 +793,48 @@ const MENU = [
     "prices": [
      120,
      120
-    ]
+    ],
+    "ar": "ماتشا لاتيه"
    },
    {
     "name": "Matcha Vanilla",
     "prices": [
      120,
      120
-    ]
+    ],
+    "ar": "ماتشا فانيليا"
    },
    {
     "name": "Matcha Coconut",
     "prices": [
      130,
      130
-    ]
+    ],
+    "ar": "ماتشا جوز الهند"
    },
    {
     "name": "Matcha Strawberry",
     "prices": [
      130,
      130
-    ]
+    ],
+    "ar": "ماتشا فراولة"
    },
    {
     "name": "Matcha Latte Pistachio",
     "prices": [
      150,
      150
-    ]
+    ],
+    "ar": "ماتشا لاتيه فستق"
    },
    {
     "name": "Matcha Spanish Latte",
     "prices": [
      130,
      130
-    ]
+    ],
+    "ar": "ماتشا سبانش لاتيه"
    }
   ]
  },
@@ -711,93 +851,107 @@ const MENU = [
     "prices": [
      50,
      60
-    ]
+    ],
+    "ar": "إسبريسو"
    },
    {
     "name": "Macchiato",
     "prices": [
      70,
      80
-    ]
+    ],
+    "ar": "ماكياتو"
    },
    {
     "name": "Latte",
     "prices": [
      null,
      90
-    ]
+    ],
+    "ar": "لاتيه"
    },
    {
     "name": "Cappuccino",
     "prices": [
      null,
      90
-    ]
+    ],
+    "ar": "كابتشينو"
    },
    {
     "name": "Flat White",
     "prices": [
      null,
      100
-    ]
+    ],
+    "ar": "فلات وايت"
    },
    {
     "name": "Cortado",
     "prices": [
      null,
      80
-    ]
+    ],
+    "ar": "كورتادو"
    },
    {
     "name": "Americano",
     "prices": [
      null,
      80
-    ]
+    ],
+    "ar": "أمريكانو"
    },
    {
     "name": "Mocha",
     "prices": [
      null,
      100
-    ]
+    ],
+    "ar": "موكا"
    },
    {
     "name": "White Mocha",
     "prices": [
      null,
      100
-    ]
+    ],
+    "ar": "وايت موكا"
    },
    {
     "name": "Hammerhead (Cold)",
     "prices": [
      null,
      115
-    ]
+    ],
+    "ar": "هامرهيد (بارد)"
    },
    {
     "name": "Spanish Latte",
     "prices": [
      null,
      110
-    ]
+    ],
+    "ar": "سبانش لاتيه"
    },
    {
     "name": "Caramel Macchiato (Hot)",
     "prices": [
      null,
      100
-    ]
+    ],
+    "ar": "كراميل ماكياتو (ساخن)"
    }
-  ]
+  ],
+  "note_ar": "الأصناف اللي ليها سعر واحد، السعر ده للدوبل"
  },
  {
   "category": "Speciality",
   "items": [
    {
     "name": "V60",
-    "price": 110
+    "price": 110,
+    "ar": "في 60"
    }
   ]
  },
@@ -806,27 +960,33 @@ const MENU = [
   "items": [
    {
     "name": "Turkish Coffee (S)",
-    "price": 50
+    "price": 50,
+    "ar": "قهوة تركي (سنجل)"
    },
    {
     "name": "Turkish Coffee (D)",
-    "price": 65
+    "price": 65,
+    "ar": "قهوة تركي (دوبل)"
    },
    {
     "name": "French Coffee Double",
-    "price": 65
+    "price": 65,
+    "ar": "قهوة فرنساوي دوبل"
    },
    {
     "name": "Hazelnut Coffee Double",
-    "price": 70
+    "price": 70,
+    "ar": "قهوة بندق دوبل"
    },
    {
     "name": "Nutella Coffee",
-    "price": 70
+    "price": 70,
+    "ar": "قهوة نوتيلا"
    },
    {
     "name": "Flavors Coffee",
-    "price": 70
+    "price": 70,
+    "ar": "قهوة بالنكهات"
    }
   ]
  },
@@ -835,79 +995,98 @@ const MENU = [
   "items": [
    {
     "name": "Tea",
-    "price": 40
+    "price": 40,
+    "ar": "شاي"
    },
    {
     "name": "Tea (Flavors - Green)",
-    "price": 45
+    "price": 45,
+    "ar": "شاي (نكهات - أخضر)"
    },
    {
     "name": "Herbs",
-    "price": 45
+    "price": 45,
+    "ar": "أعشاب"
    },
    {
     "name": "Latte Tea",
-    "price": 60
+    "price": 60,
+    "ar": "شاي لاتيه"
    },
    {
     "name": "Karak Tea",
-    "price": 75
+    "price": 75,
+    "ar": "شاي كرك"
    },
    {
     "name": "Vitamin C",
-    "price": 75
+    "price": 75,
+    "ar": "فيتامين سي"
    },
    {
     "name": "Milk Cinnamon",
-    "price": 70
+    "price": 70,
+    "ar": "حليب بالقرفة"
    },
    {
     "name": "Nescafe",
-    "price": 75
+    "price": 75,
+    "ar": "نسكافيه"
    },
    {
     "name": "Hot Cider",
-    "price": 90
+    "price": 90,
+    "ar": "سيدر سخن"
    },
    {
     "name": "Hot Lotus",
-    "price": 110
+    "price": 110,
+    "ar": "لوتس سخن"
    },
    {
     "name": "Hot Oreo",
-    "price": 110
+    "price": 110,
+    "ar": "أوريو سخن"
    },
    {
     "name": "Hot Caramel",
-    "price": 100
+    "price": 100,
+    "ar": "كراميل سخن"
    },
    {
     "name": "Hot Pistachio",
-    "price": 130
+    "price": 130,
+    "ar": "فستق سخن"
    },
    {
     "name": "Hot Chocolate",
-    "price": 100
+    "price": 100,
+    "ar": "هوت شوكليت"
    },
    {
     "name": "Hot Chocolate (Marshmallow)",
-    "price": 100
+    "price": 100,
+    "ar": "هوت شوكليت (مارشميلو)"
    },
    {
     "name": "Hot Chocolate (Hazelnut)",
-    "price": 110
+    "price": 110,
+    "ar": "هوت شوكليت (بندق)"
    },
    {
     "name": "Sahlab Classic",
-    "price": 70
+    "price": 70,
+    "ar": "سحلب كلاسيك"
    },
    {
     "name": "Sahlab With Nuts",
-    "price": 95
+    "price": 95,
+    "ar": "سحلب بالمكسرات"
    },
    {
     "name": "Sahlab Pistachio",
-    "price": 130
+    "price": 130,
+    "ar": "سحلب فستق"
    }
   ]
  },
@@ -916,15 +1095,18 @@ const MENU = [
   "items": [
    {
     "name": "Red bull",
-    "price": 90
+    "price": 90,
+    "ar": "ريد بول"
    },
    {
     "name": "Mineral Water",
-    "price": 10
+    "price": 10,
+    "ar": "مياه معدنية"
    },
    {
     "name": "Soft Drink",
-    "price": 55
+    "price": 55,
+    "ar": "مشروب غازي"
    }
   ]
  },
@@ -933,103 +1115,128 @@ const MENU = [
   "items": [
    {
     "name": "Espresso Shot",
-    "price": 30
+    "price": 30,
+    "ar": "شوت إسبريسو"
    },
    {
     "name": "Nuts",
-    "price": 35
+    "price": 35,
+    "ar": "مكسرات"
    },
    {
     "name": "Ice Cream (Bola)",
-    "price": 25
+    "price": 25,
+    "ar": "آيس كريم (بولة)"
    },
    {
     "name": "Milk",
-    "price": 20
+    "price": 20,
+    "ar": "حليب"
    },
    {
     "name": "Fruits",
-    "price": 25
+    "price": 25,
+    "ar": "فواكه"
    },
    {
     "name": "Nutella Sauce",
-    "price": 30
+    "price": 30,
+    "ar": "صوص نوتيلا"
    },
    {
     "name": "Kinder Sauce",
-    "price": 30
+    "price": 30,
+    "ar": "صوص كيندر"
    },
    {
     "name": "Lotus Sauce",
-    "price": 30
+    "price": 30,
+    "ar": "صوص لوتس"
    },
    {
     "name": "Oreo Sauce",
-    "price": 30
+    "price": 30,
+    "ar": "صوص أوريو"
    },
    {
     "name": "White Chocolate Sauce",
-    "price": 25
+    "price": 25,
+    "ar": "صوص وايت شوكليت"
    },
    {
     "name": "Dark Chocolate Sauce",
-    "price": 25
+    "price": 25,
+    "ar": "صوص دارك شوكليت"
    },
    {
     "name": "Caramel Sauce",
-    "price": 25
+    "price": 25,
+    "ar": "صوص كراميل"
    },
    {
     "name": "Strawberry Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص فراولة"
    },
    {
     "name": "Blueberry Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص بلوبيري"
    },
    {
     "name": "Pistachio Sauce",
-    "price": 50
+    "price": 50,
+    "ar": "صوص فستق"
    },
    {
     "name": "Marshmallow",
-    "price": 20
+    "price": 20,
+    "ar": "مارشميلو"
    },
    {
     "name": "Boba",
-    "price": 25
+    "price": 25,
+    "ar": "بوبا"
    },
    {
     "name": "Whipped Cream",
-    "price": 20
+    "price": 20,
+    "ar": "كريمة مخفوقة"
    },
    {
     "name": "Flavor",
-    "price": 20
+    "price": 20,
+    "ar": "نكهة"
    },
    {
     "name": "Ranch Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص رانش"
    },
    {
     "name": "Texas Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص تكساس"
    },
    {
     "name": "B.B.Q Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص باربكيو"
    },
    {
     "name": "Cheddar Cheese Sauce",
-    "price": 20
+    "price": 20,
+    "ar": "صوص تشيدر"
    },
    {
     "name": "Turkey",
-    "price": 25
+    "price": 25,
+    "ar": "تركي"
    },
    {
     "name": "Pommes Frites",
-    "price": 30
+    "price": 30,
+    "ar": "بطاطس مقلية"
    }
   ]
  }

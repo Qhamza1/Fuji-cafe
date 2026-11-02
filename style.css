@@ -1,4 +1,4 @@
-:root{--cream:#FEF2E4;--paper:#F5E3CF;--brown:#7A5C4A;--ink:#34251D;--sun:#C23B22;--line:#E0C7AE;--top:54px;--pad:clamp(16px,4.5vw,32px);--max:1100px}
+:root{--field:#fff9f1;--on-sun:#fff;--foot-bg:#7A5C4A;--foot-fg:#FEF2E4;--ok-bg:#DCE8CF;--ok-fg:#33501F;--cream:#FEF2E4;--paper:#F5E3CF;--brown:#7A5C4A;--ink:#34251D;--sun:#C23B22;--line:#E0C7AE;--top:54px;--pad:clamp(16px,4.5vw,32px);--max:1100px}
 *{box-sizing:border-box;min-width:0;-webkit-tap-highlight-color:transparent}
 a,button,input{-webkit-tap-highlight-color:transparent}
 a,button{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
@@ -18,7 +18,7 @@ img{max-width:100%;display:block}
 .mark img{height:30px;width:auto}
 .actions{display:flex;align-items:center;gap:8px;flex:0 1 auto}
 .state{font-size:.78rem;padding:2px 10px;border-radius:99px;background:var(--paper);color:var(--brown);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.state.on{background:#DCE8CF;color:#33501F}
+.state.on{background:var(--ok-bg);color:var(--ok-fg)}
 #lang{flex:none;font:600 .8rem 'Cairo',sans-serif;border:1.5px solid var(--brown);background:none;color:var(--brown);border-radius:99px;padding:5px 14px;cursor:pointer}
 
 .hero,.favs,.menu,.visit{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
@@ -42,7 +42,7 @@ img{max-width:100%;display:block}
 
 .menu,.visit{padding-block:26px 10px}
 .note{color:var(--brown);font-size:.85rem;margin:2px 0 12px}
-#q{width:100%;padding:10px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff9f1;font:inherit;color:var(--ink)}
+#q{width:100%;padding:10px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--field);font:inherit;color:var(--ink)}
 .chips{position:sticky;top:var(--top);z-index:5;display:flex;gap:7px;overflow-x:auto;padding:10px 0;margin-top:6px;background:var(--cream);scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chips a{flex:none;padding:4px 14px;border-radius:99px;background:var(--paper);text-decoration:none;font-size:.85rem;white-space:nowrap}
@@ -61,7 +61,7 @@ img{max-width:100%;display:block}
 .p{flex:none;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0 10px;font-weight:700;text-align:end}
 .p span{white-space:nowrap}
 .p i{font-style:normal;font-weight:400;font-size:.72rem;color:var(--brown);margin-inline-end:3px}
-.badge{background:var(--sun);color:#fff;font-size:.66rem;padding:0 7px;border-radius:99px;margin-inline-start:6px}
+.badge{background:var(--sun);color:var(--on-sun);font-size:.66rem;padding:0 7px;border-radius:99px;margin-inline-start:6px}
 
 .visit{border-top:1px solid var(--line);margin-top:26px}
 .visit h3{font-size:1.05rem;color:var(--brown);margin:16px 0 6px}
@@ -72,7 +72,7 @@ td{padding:6px 0;border-bottom:1px solid var(--line)}
 td:last-child{text-align:end}
 tr.today td{font-weight:700;color:var(--sun)}
 
-footer{background:var(--brown);color:var(--cream);text-align:center;padding:26px var(--pad) calc(26px + env(safe-area-inset-bottom));margin-top:30px;font-size:.88rem}
+footer{background:var(--foot-bg);color:var(--foot-fg);text-align:center;padding:26px var(--pad) calc(26px + env(safe-area-inset-bottom));margin-top:30px;font-size:.88rem}
 .flogo{width:min(70vw,260px);margin:0 auto 10px}
 footer p{margin:4px 0}
 .fblock{margin-top:22px}
@@ -116,3 +116,19 @@ footer p{margin:4px 0}
 /* رسالة الأوفلاين */
 .offline{position:fixed;top:0;inset-inline:0;z-index:999;padding:8px 14px;text-align:center;font-size:.85rem;background:#5C3D2E;color:#FEF2E4}
 .offline[hidden]{display:none}
+
+/* زرار الوضع (دارك / لايت) */
+.ibtn{flex:none;width:34px;height:34px;display:grid;place-items:center;padding:0;border:1.5px solid var(--brown);background:none;color:var(--brown);border-radius:50%;cursor:pointer}
+.ibtn svg{width:17px;height:17px;grid-area:1/1}
+.ibtn .i-sun{display:none}
+:root[data-theme=dark] .ibtn .i-sun{display:block}
+:root[data-theme=dark] .ibtn .i-moon{display:none}
+
+/* الوضع الداكن */
+:root[data-theme=dark]{color-scheme:dark;--cream:#1F1712;--paper:#2D211A;--brown:#D2B59B;--ink:#F4E8DA;--sun:#F0795E;--line:#463629;--field:#281D17;--on-sun:#2A1710;--foot-bg:#2D211A;--foot-fg:#F4E8DA;--ok-bg:#2B3A20;--ok-fg:#C4E3A8}
+/* صور المنتجات خلفيتها كريمي، فبنعرضها كبطاقات */
+:root[data-theme=dark] .hero>img{border-radius:20px}
+:root[data-theme=dark] .fav img{background:#FEF2E4;border-radius:14px}
+:root[data-theme=dark] .cat-h img{background:#FEF2E4;border-radius:12px 12px 0 0}
+:root[data-theme=dark] .mark img{filter:brightness(1.8)}
+:root[data-theme=dark] footer{border-top:1px solid var(--line)}
