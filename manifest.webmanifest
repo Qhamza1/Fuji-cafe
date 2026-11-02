@@ -1,0 +1,17 @@
+{
+  "name": "Fuji Café - فوجي كافيه",
+  "short_name": "Fuji Café",
+  "description": "منيو فوجي كافيه كفر الشيخ",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FEF2E4",
+  "theme_color": "#FEF2E4",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

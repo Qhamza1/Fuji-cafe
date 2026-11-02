@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FEF2E4">
+<title>Fuji Café | فوجي كافيه - كفر الشيخ</title>
+<meta name="description" content="Fuji Café - Coffee and Desserts, Kafr El-Sheikh. منيو كامل بالأسعار.">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+<div id="offline-msg" class="offline" hidden>أنت أوفلاين، والمنيو معروض من آخر نسخة محفوظة</div>
+<header class="top">
+  <a class="mark" href="#top" aria-label="FUJI"><img id="mk" alt="FUJI"></a>
+  <div class="actions">
+    <span id="state" class="state"></span>
+    <button id="lang" type="button" aria-label="Language">EN</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img id="art" alt="Fuji">
+    <h1><img id="logo" alt="FUJI - Coffee and Desserts"></h1>
+    <p class="about" id="about"></p>
+    <div class="cta">
+      <a class="btn solid" id="wa" href="#" target="_blank" rel="noopener" data-i18n="cta_wa"></a>
+      <a class="btn" id="call" href="#" data-i18n="cta_call"></a>
+      <a class="btn" href="#menu" data-i18n="cta_menu"></a>
+    </div>
+  </section>
+
+  <section class="favs">
+    <h2 class="sec" data-i18n="favs"></h2>
+    <div id="fav" class="fav"></div>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2 class="sec" data-i18n="nav_menu"></h2>
+    <p class="note" data-i18n="note_price"></p>
+    <input id="q" type="search" data-i18n-ph="search" autocomplete="off">
+    <nav id="chips" class="chips"></nav>
+    <div id="list"></div>
+    <p id="none" class="note" hidden data-i18n="none"></p>
+  </section>
+
+  <section id="visit" class="visit">
+    <h2 class="sec" data-i18n="nav_visit"></h2>
+    <h3 data-i18n="where"></h3>
+    <p id="addr"></p>
+    <p><a class="btn" id="gmaps" href="#" target="_blank" rel="noopener" data-i18n="open_map"></a></p>
+    <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://maps.google.com/maps?q=Fuji%20cafe%20Kafr%20El%20Sheikh&output=embed"></iframe>
+    <h3 data-i18n="hours"></h3>
+    <table id="hours"></table>
+  </section>
+</main>
+
+<footer>
+  <img id="flogo" class="flogo" alt="FUJI - Coffee and Desserts">
+
+  <div class="fblock">
+    <h4 data-i18n="follow"></h4>
+    <div class="ficons">
+      <a id="soc-fb" class="ficon" href="#" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971h-1.513c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        <span>Facebook</span>
+      </a>
+      <a id="soc-ig" class="ficon" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.4" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a id="soc-tt" class="ficon" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        <span>TikTok</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="fblock">
+    <h4 data-i18n="pay"></h4>
+    <div class="ficons">
+      <a id="pay-ip" class="ficon ipay" href="#" target="_blank" rel="noopener" aria-label="InstaPay">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 395 270" width="395" height="270">
+  <path fill="#4A2A7A" d="M128 157h44l-42 149H88z"/>
+  <path fill="#F08B7B" d="M137 307l46-150h40l-46 150z"/>
+  <path fill="#F26B1D" d="M192 307l46-150h40l-46 150z"/>
+  <path fill="#7A58A0" fill-rule="evenodd" d="M278 157h90c64 0 102 23 102 48s-38 45-102 45h-44v57h-46zM324 186v36h38c20 0 30-8 30-18s-10-18-30-18z"/>
+  <text x="85" y="395" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-style="italic" font-size="68" textLength="385" lengthAdjust="spacingAndGlyphs"><tspan fill="#4A2A7A">INSTA</tspan><tspan fill="#7A58A0">PAY</tspan></text>
+</svg>
+        <span>InstaPay</span>
+      </a>
+      <a id="pay-vf" class="ficon" href="#" target="_blank" rel="noopener" aria-label="Vodafone Cash">
+        <svg fill="#ff0000" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>Vodafone icon</title><path d="M12 0A12 12 0 0 0 0 12A12 12 0 0 0 12 24A12 12 0 0 0 24 12A12 12 0 0 0 12 0M16.25 1.12C16.57 1.12 16.9 1.15 17.11 1.22C14.94 1.67 13.21 3.69 13.22 6C13.22 6.05 13.22 6.11 13.23 6.17C16.87 7.06 18.5 9.25 18.5 12.28C18.54 15.31 16.14 18.64 12.09 18.65C8.82 18.66 5.41 15.86 5.39 11.37C5.38 8.4 7 5.54 9.04 3.85C11.04 2.19 13.77 1.13 16.25 1.12Z"></path></g></svg>
+        <span>Vodafone Cash</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="femail"><span id="mail-lbl" data-i18n="email_lbl"></span> <a id="mail" href="#" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span id="mail-txt"></span></a></p>
+
+  <p class="credit">Developed by <span id="dev-name"></span>
+    <span id="dev-links" class="dlinks">
+      <a id="dev-ig" class="dicon" href="#" target="_blank" rel="noopener" aria-label="Developer Instagram" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.4" fill="currentColor"/></svg></a>
+      <a id="dev-wa" class="dicon" href="#" target="_blank" rel="noopener" aria-label="Developer WhatsApp" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      </span>
+    </p>
+</footer>
+
+<script src="data.js"></script>
+<script src="images.js"></script>
+<script src="script.js"></script>
+<script>
+(function () {
+  var msg = document.getElementById('offline-msg');
+  function sync() { msg.hidden = navigator.onLine; }
+  window.addEventListener('online', sync);
+  window.addEventListener('offline', sync);
+  sync();
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js').catch(function (e) { console.warn('SW failed', e); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
