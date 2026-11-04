@@ -1,5 +1,8 @@
 const T = {
   ar: {
+    demo_msg: 'هذا المنيو الإلكتروني في وضع العرض التجريبي وسيتم إيقافه خلال:',
+    end_title: 'انتهت فترة العرض التجريبي لهذا الديمو.',
+    end_contact: 'لتفعيل الخدمة بشكل رسمي يرجى التواصل مع المطور:',
     nav_menu: 'المنيو', nav_visit: 'زورنا', favs: 'الأكثر طلبًا',
     cta_menu: 'المنيو', cta_wa: 'واتساب', cta_call: 'اتصل',
     follow: 'تابعنا', pay: 'ادفع بـ InstaPay أو فودافون كاش', email_lbl: 'للتواصل معانا:',
@@ -14,6 +17,9 @@ const T = {
     cats: { 'Sweet Chimney': 'شيمني حلو', 'Savorey Chimney': 'شيمني مالح', 'Waffle Square': 'وافل', 'Mini Pancakes': 'ميني بان كيك', Taiyaki: 'تايياكي', Tacos: 'تاكوس', 'Dragon Balls': 'دراجون بولز', Desserts: 'حلويات', Mochi: 'موتشي', Sundae: 'صنداي', Milkshake: 'ميلك شيك', Frappe: 'فرابيه', Frappuccino: 'فرابتشينو', Smoothie: 'سموذي', 'Soda Boba': 'صودا بوبا', 'Fresh Juice': 'عصاير فريش', 'Ice Coffee': 'قهوة مثلجة', Matcha: 'ماتشا', Espresso: 'إسبريسو', Speciality: 'سبيشالتي', 'Turkish Coffee': 'قهوة تركي', 'Hot Drinks': 'مشروبات ساخنة', 'Soft Drinks': 'مشروبات غازية', Extra: 'إضافات' }
   },
   en: {
+    demo_msg: 'This digital menu is in demo mode and will be shut down in:',
+    end_title: 'The trial period for this demo has ended.',
+    end_contact: 'To activate the service officially, please contact the developer:',
     nav_menu: 'Menu', nav_visit: 'Visit us', favs: 'Favorites',
     cta_menu: 'Menu', cta_wa: 'WhatsApp', cta_call: 'Call',
     follow: 'Follow us', pay: 'Pay with InstaPay or Vodafone Cash', email_lbl: 'Contact us:',
@@ -129,3 +135,55 @@ $('#lang').addEventListener('click', () => {
   render();
 });
 render();
+
+// ===== العداد التنازلي للعرض التجريبي =====
+(function () {
+  const bar = $('#demo-bar'), out = $('#demo-time'), root = document.documentElement;
+  let skew = 0, timer = null, ended = false;
+
+  // روابط المطور في صفحة الانتهاء
+  $('#end-name').textContent = CAFE.developer.name;
+  if (CAFE.developer.instagram) { $('#end-ig').href = CAFE.developer.instagram; $('#end-ig').hidden = false; }
+  if (CAFE.developer.whatsapp) { $('#end-wa').href = 'https://wa.me/' + CAFE.developer.whatsapp.replace(/\D/g, ''); $('#end-wa').hidden = false; }
+
+  const pad = (n) => String(n).padStart(2, '0');
+  const left = () => window.DEMO_END - (Date.now() + skew);
+
+  function finish() {
+    if (ended) return;
+    ended = true;
+    clearInterval(timer);
+    root.classList.add('demo-ended');
+    document.querySelectorAll('header.top, main, footer, #demo-bar').forEach((el) => el.remove());
+    root.style.removeProperty('--bar');
+    window.scrollTo(0, 0);
+  }
+
+  function tick() {
+    const ms = left();
+    if (ms <= 0) { finish(); return; }
+    const s = Math.ceil(ms / 1000);
+    out.textContent = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor((s % 3600) / 60)) + ':' + pad(s % 60);
+    out.classList.toggle('low', s <= 3600);
+  }
+
+  if (left() <= 0) { finish(); return; }
+
+  // نخلي الهيدر والشيبس يلزقوا تحت الشريط مهما كان ارتفاعه
+  const setBar = () => root.style.setProperty('--bar', bar.offsetHeight + 'px');
+  if (window.ResizeObserver) new ResizeObserver(setBar).observe(bar);
+  window.addEventListener('resize', setBar);
+  setBar();
+
+  tick();
+  timer = setInterval(tick, 500);
+  document.addEventListener('visibilitychange', tick);
+
+  // نضبط الوقت على ساعة السيرفر، عشان تغيير وقت الجهاز ما يعطّل العداد
+  try {
+    fetch(location.pathname, { method: 'HEAD', cache: 'no-store' }).then((r) => {
+      const d = Date.parse(r.headers.get('date'));
+      if (d) { skew = d - Date.now(); tick(); }
+    }).catch(() => {});
+  } catch (e) {}
+})();
